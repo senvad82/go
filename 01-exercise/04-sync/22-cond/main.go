@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"sync"
-	"time"
 )
 
 var sharedRsc = make(map[string]interface{})
@@ -18,7 +17,7 @@ func main() {
 		//TODO: suspend goroutine until sharedRsc is populated.
 
 		for len(sharedRsc) == 0 {
-			time.Sleep(1 * time.Millisecond)
+			//time.Sleep(1 * time.Millisecond)
 		}
 
 		fmt.Println(sharedRsc["rsc1"])
@@ -31,7 +30,7 @@ func main() {
 		//TODO: suspend goroutine until sharedRsc is populated.
 
 		for len(sharedRsc) == 0 {
-			time.Sleep(1 * time.Millisecond)
+			//time.Sleep(1 * time.Millisecond)
 		}
 
 		fmt.Println(sharedRsc["rsc2"])

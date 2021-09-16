@@ -33,7 +33,7 @@ func Crawl(url string, depth int) {
 	for fetching := 1; fetching > 0; fetching-- {
 		res := <-results
 		if res.err != nil {
-			// fmt.Println(res.err)
+			fmt.Println(res.err)
 			continue
 		}
 
